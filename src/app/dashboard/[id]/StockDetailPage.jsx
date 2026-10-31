@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { Chart } from "react-google-charts";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -46,22 +47,22 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-4">
             <li>
-              <a
+              <Link
                 href="/dashboard"
                 className="text-blue-500 font-semibold flex items-center"
               >
                 <Zap className="mr-1" size={16} />
                 Explore
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/dashboard"
                 className="text-gray-300 hover:text-blue-500 transition-colors flex items-center"
               >
                 <BarChart2 className="mr-1" size={16} />
                 Investments
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -144,13 +145,13 @@ const Breadcrumb = ({ stock }) => (
     {...fadeInUp}
     className="flex items-center space-x-2 text-sm text-gray-400 my-4"
   >
-    <a href="/" className="hover:text-blue-500">
+    <Link href="/" className="hover:text-blue-500">
       Home
-    </a>
+    </Link>
     <span>/</span>
-    <a href="/dashboard" className="hover:text-blue-500">
+    <Link href="/dashboard" className="hover:text-blue-500">
       Stocks
-    </a>
+    </Link>
     <span>/</span>
     <span className="text-blue-500">{stock}</span>
   </motion.div>

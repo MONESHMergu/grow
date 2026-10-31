@@ -26,6 +26,7 @@ import {
   Settings,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -54,31 +55,31 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-4">
             <li>
-              <a
+              <Link
                 href="/"
                 className="text-blue-500 font-semibold flex items-center"
               >
                 <Zap className="mr-1" size={16} />
                 Explore
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="text-gray-300 hover:text-blue-500 transition-colors flex items-center"
               >
                 <Globe className="mr-1" size={16} />
                 Investments
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/"
                 className="text-gray-300 hover:text-blue-500 transition-colors flex items-center"
               >
                 <BookOpen className="mr-1" size={16} />
                 Learn
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
